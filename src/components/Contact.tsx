@@ -138,6 +138,7 @@ const Contact = () => {
                       id="name"
                       name="name"
                       type="text"
+                      className='border-blue-200'
                       required
                       value={formData.name}
                       onChange={handleChange}
@@ -152,6 +153,7 @@ const Contact = () => {
                       id="email"
                       name="email"
                       type="email"
+                      className='border-blue-200'
                       required
                       value={formData.email}
                       onChange={handleChange}
@@ -167,6 +169,7 @@ const Contact = () => {
                   <Input
                     id="company"
                     name="company"
+                    className='border-blue-200'
                     type="text"
                     value={formData.company}
                     onChange={handleChange}
@@ -181,6 +184,7 @@ const Contact = () => {
                   <Textarea
                     id="message"
                     name="message"
+                    className='border-blue-200'
                     required
                     value={formData.message}
                     onChange={handleChange}
