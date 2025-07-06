@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #ffffff;  /* fundo claro sempre */
   --foreground: #171717;
 }
 
@@ -12,10 +12,11 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* 👇 remove a alteração de background no modo escuro */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* --background: #0a0a0a; removido ou comentado */
+    /* --foreground: #ededed; */
   }
 }
 
