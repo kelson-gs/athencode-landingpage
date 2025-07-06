@@ -48,7 +48,7 @@ const Hero = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-16 animate-fade-in animation-delay-800">
-          <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-sm border">
+          <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-sm border border-blue-50">
             <div className="bg-blue-100 p-3 rounded-full mb-4">
               <Code className="h-8 w-8 text-blue-600" />
             </div>
@@ -56,7 +56,7 @@ const Hero = () => {
             <p className="text-slate-600 text-center">Metodologias modernas para entregas rápidas e eficientes</p>
           </div>
           
-          <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-sm border">
+          <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-sm border border-blue-50">
             <div className="bg-blue-100 p-3 rounded-full mb-4">
               <Zap className="h-8 w-8 text-blue-600" />
             </div>
@@ -64,7 +64,7 @@ const Hero = () => {
             <p className="text-slate-600 text-center">Aplicações rápidas e escaláveis para qualquer demanda</p>
           </div>
           
-          <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-sm border">
+          <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-sm border border-blue-50">
             <div className="bg-blue-100 p-3 rounded-full mb-4">
               <Users className="h-8 w-8 text-blue-600" />
             </div>
