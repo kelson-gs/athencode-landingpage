@@ -1,9 +1,19 @@
-import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Globe, Smartphone, Database, Cloud, Shield, Cog } from 'lucide-react';
+import { Bot, Cloud, Database, Globe, Smartphone } from 'lucide-react';
 
 const Services = () => {
   const services = [
+    {
+      icon: Bot,
+      title: 'Automação & Chatbot',
+      description: 'Soluções inteligentes de automação e chatbots para melhorar eficiência e atendimento ao cliente.',
+      features: [
+        'Chatbots 24/7 para atendimento automático',
+        'Integração com WhatsApp, Telegram e sites',
+        'Automação de processos internos (RPA)',
+        'Respostas inteligentes com IA generativa'
+      ]
+    },
     {
       icon: Globe,
       title: 'Desenvolvimento Web',
@@ -22,24 +32,7 @@ const Services = () => {
       description: 'Sistemas robustos e escaláveis com arquitetura moderna e segura.',
       features: ['Node.js', 'Python', 'PostgreSQL', 'REST & GraphQL']
     },
-    {
-      icon: Cloud,
-      title: 'Cloud & DevOps',
-      description: 'Infraestrutura na nuvem, CI/CD e automatização de processos.',
-      features: ['AWS', 'Docker', 'Kubernetes', 'Monitoramento']
-    },
-    {
-      icon: Shield,
-      title: 'Segurança Digital',
-      description: 'Implementação de melhores práticas de segurança e proteção de dados.',
-      features: ['Autenticação', 'Criptografia', 'LGPD', 'Auditoria']
-    },
-    {
-      icon: Cog,
-      title: 'Consultoria Tech',
-      description: 'Análise e otimização de sistemas existentes, migração e modernização.',
-      features: ['Code Review', 'Arquitetura', 'Performance', 'Migração']
-    }
+    
   ];
 
   return (

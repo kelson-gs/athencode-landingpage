@@ -1,16 +1,28 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Linkedin, Github, Instagram } from 'lucide-react';
+import logo from '/public/athen-code-logo.png'
+import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-900 text-white">
-      <div className="container mx-auto px-4 py-12">
+    <footer className="bg-slate-900 relative text-white">
+        <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/vid-back.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeo em HTML5.
+      </video>
+      <div className="container mx-auto px-4 py-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <div className="mb-6">
-              <img 
-                src="/lovable-uploads/2e8e6ca7-90cf-43a3-aa19-346a2584ebac.png" 
-                alt="Athen Code Logo" 
+              <Image
+                src={logo} 
+                alt="Logo Athen Code" 
                 className="h-16 w-auto mb-4 filter brightness-0 invert"
               />
               <p className="text-slate-300 text-lg max-w-md">
@@ -20,7 +32,7 @@ const Footer = () => {
             </div>
             
             <div className="flex space-x-4">
-              <a 
+              {/* <a 
                 href="#" 
                 className="bg-slate-800 p-3 rounded-full hover:bg-blue-600 transition-colors"
                 aria-label="LinkedIn"
@@ -40,17 +52,17 @@ const Footer = () => {
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
-              </a>
+              </a> */}
             </div>
           </div>
           
           <div>
             <h4 className="text-lg font-semibold mb-4">Serviços</h4>
             <ul className="space-y-2 text-slate-300">
+              <li><a href="#services" className="hover:text-white transition-colors">Automação & Chatbot</a></li>
               <li><a href="#services" className="hover:text-white transition-colors">Desenvolvimento Web</a></li>
               <li><a href="#services" className="hover:text-white transition-colors">Apps Mobile</a></li>
               <li><a href="#services" className="hover:text-white transition-colors">Backend & APIs</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Cloud & DevOps</a></li>
               <li><a href="#services" className="hover:text-white transition-colors">Consultoria Tech</a></li>
             </ul>
           </div>
@@ -60,15 +72,11 @@ const Footer = () => {
             <div className="space-y-3 text-slate-300">
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4" />
-                <span>contato@athencode.com.br</span>
+                <span>athencodecompany@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4" />
-                <span>+55 (11) 99999-9999</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="h-4 w-4" />
-                <span>São Paulo, SP</span>
+                <span>+55 (77) 9111-7217</span>
               </div>
             </div>
           </div>

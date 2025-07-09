@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, CheckCircle, Zap, Shield, Rocket, Code } from 'lucide-react';
 import { useState } from 'react';
 
 const Contact = () => {
@@ -30,17 +30,141 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20 bg-slate-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
-            Vamos Conversar?
-          </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Está pronto para transformar sua ideia em realidade? Entre em contato conosco 
-            e vamos discutir como podemos ajudar seu projeto a decolar.
+       <section>
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Por que escolher a .ATHEN CODE?</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Somos mais que desenvolvedores. Somos parceiros estratégicos comprometidos com o sucesso do seu projeto.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Card 1 */}
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
+              <CardHeader className="text-center pb-4">
+                <div className="mx-auto w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600  rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Code className="w-8 h-8 text-white" />
+                </div>
+                <CardTitle className="text-xl font-bold text-gray-900">Experiência Comprovada</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <CardDescription className="text-gray-600 leading-relaxed">
+                  Mais de 100 projetos complexos entregues com sucesso. Nossa expertise abrange desde startups até
+                  grandes corporações, sempre superando expectativas.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            {/* Card 2 */}
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
+              <CardHeader className="text-center pb-4">
+                <div className="mx-auto w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600  rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Rocket className="w-8 h-8 text-white" />
+                </div>
+                <CardTitle className="text-xl font-bold text-gray-900">Metodologias Ágeis</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <CardDescription className="text-gray-600 leading-relaxed">
+                  Entregas pontuais garantidas através de Scrum e Kanban. Transparência total no processo com
+                  atualizações constantes e feedback contínuo.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            {/* Card 3 */}
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
+              <CardHeader className="text-center pb-4">
+                <div className="mx-auto w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600  rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Shield className="w-8 h-8 text-white" />
+                </div>
+                <CardTitle className="text-xl font-bold text-gray-900">Suporte Contínuo</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <CardDescription className="text-gray-600 leading-relaxed">
+                  Manutenção garantida e suporte 24/7. Seu projeto nunca fica desatualizado com nossos planos de
+                  evolução contínua e monitoramento proativo.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            {/* Card 4 */}
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
+              <CardHeader className="text-center pb-4">
+                <div className="mx-auto w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="w-8 h-8 text-white" />
+                </div>
+                <CardTitle className="text-xl font-bold text-gray-900">Tecnologias Modernas</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <CardDescription className="text-gray-600 leading-relaxed">
+                  Stack tecnológico de ponta: React, Next.js, Node.js, Python, Cloud Computing. Soluções escaláveis que
+                  crescem com seu negócio.
+                </CardDescription>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">O que você ganha trabalhando conosco</h3>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Qualidade Garantida</h4>
+                    <p className="text-gray-600">Código limpo, testado e documentado</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Escalabilidade</h4>
+                    <p className="text-gray-600">Arquitetura preparada para crescimento</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+
+                <div className="flex items-start space-x-4">
+                  <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Segurança</h4>
+                    <p className="text-gray-600">Proteção de dados e compliance garantidos</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Inovação</h4>
+                    <p className="text-gray-600">Sempre à frente das tendências tecnológicas</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-purple-800 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h3 className="text-4xl font-bold mb-6">Pronto para transformar sua ideia em realidade?</h3>
+          <p className="text-xl text-purple-100 max-w-2xl mx-auto">
+            Entre em contato conosco hoje mesmo e descubra como podemos acelerar o crescimento do seu negócio com
+            tecnologia de ponta.
           </p>
         </div>
-        
+      </section>
+      <div className="container mx-auto py-20 px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="space-y-8">
             <div>
@@ -53,8 +177,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-slate-800">Email</h4>
-                    <p className="text-slate-600">contato@athencode.com.br</p>
-                    <p className="text-slate-600">comercial@athencode.com.br</p>
+                    <p className="text-slate-600">athencodecompany@gmail.com</p>
                   </div>
                 </div>
                 
@@ -64,19 +187,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-slate-800">Telefone</h4>
-                    <p className="text-slate-600">+55 (11) 99999-9999</p>
-                    <p className="text-slate-600">+55 (11) 3333-3333</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="bg-blue-100 p-3 rounded-full">
-                    <MapPin className="h-6 w-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-slate-800">Localização</h4>
-                    <p className="text-slate-600">São Paulo, SP - Brasil</p>
-                    <p className="text-slate-600">Atendimento em todo território nacional</p>
+                    <p className="text-slate-600">+55 (77) 9111-7217</p>
                   </div>
                 </div>
                 
@@ -92,32 +203,6 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            
-            <Card className="border-slate-200">
-              <CardHeader>
-                <CardTitle className="text-xl text-slate-800">Por que escolher a .ATHEN CODE?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3">
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-                    <span className="text-slate-600">Experiência comprovada em projetos complexos</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-                    <span className="text-slate-600">Metodologias ágeis e entregas pontuais</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-                    <span className="text-slate-600">Suporte contínuo e manutenção garantida</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-                    <span className="text-slate-600">Tecnologias modernas e escaláveis</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
           </div>
           
           <Card className="border-slate-200">
