@@ -29,3 +29,6 @@ jobs:
           server-dir: /www/
           dangerous-clean-slate: true
           log-level: verbose
+
+          exclude: |
+            **/_next/**
