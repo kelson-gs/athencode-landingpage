@@ -1,0 +1,29 @@
+name: Deploy para KingHost via FTP
+
+on:
+  push:
+    branches:
+      - master # ou main, dependendo do seu repo
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🔄 Checkout do código
+        uses: actions/checkout@v3
+
+      - name: 📦 Instalar dependências
+        run: yarn install
+
+      - name: 🛠️ Build e exportar site estático
+        run: yarn run deploy
+
+      - name: 🚀 Enviar via FTP para a KingHost
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          server: athencode.uni5.net
+          username: athencode
+          password: Ahtne@32dfkdjf
+          local-dir: ./deploy
+          server-dir: /www/
