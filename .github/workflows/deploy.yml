@@ -20,7 +20,7 @@ jobs:
         run: yarn run deploy
 
       - name: 🚀 Enviar via FTP para a KingHost
-        uses: SamKirkland/FTP-Deploy-Action@v4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: athencode.uni5.net
           username: athencode
