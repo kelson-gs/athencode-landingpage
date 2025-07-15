@@ -1,7 +1,4 @@
-import React from 'react';
-import { Mail, Phone, MapPin, Linkedin, Github, Instagram } from 'lucide-react';
-import logo from '/public/athen-code-logo.png'
-import Image from 'next/image';
+import { Mail, Phone } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -20,10 +17,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <div className="mb-6">
-              <Image
-                src={logo} 
+               <img
+                src='https://res.cloudinary.com/dup3eggmc/image/upload/v1752606873/athen-code-logo-svg_bhij80.svg'
                 alt="Logo Athen Code" 
-                className="h-16 w-auto mb-4 filter brightness-0 invert"
+                className="mb-4 filter brightness-0 invert"
               />
               <p className="text-slate-300 text-lg max-w-md">
                 Transformamos ideias em soluções digitais inovadoras. 

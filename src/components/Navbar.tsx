@@ -1,9 +1,6 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
-import logo from '/public/athen-code-logo.png'
-
 
 export default function Navbar() {
   return (
@@ -11,11 +8,10 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center h-10 text-xl font-bold text-blue-600">
           <Link href="/">
-            <Image 
-              src={logo} 
+            <img 
+              src='https://res.cloudinary.com/dup3eggmc/image/upload/v1752606873/athen-code-logo-svg_bhij80.svg'
               alt="Athen Code Logo" 
-              className="mx-auto h-15 w-auto"
-              objectFit="center"
+              className="mx-auto w-auto"
             />
           </Link>
         </div>

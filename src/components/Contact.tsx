@@ -184,7 +184,7 @@ const Contact = () => {
       </section>
 
       {/* CTA Section */}
-      <section id="contact-form" className="py-20 bg-gradient-to-r from-purple-600 to-purple-800 text-white">
+      <section id="contact-form" className="py-20 bg-gradient-to-r from-blue-500 to-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h3 className="text-4xl font-bold mb-6">Pronto para transformar sua ideia em realidade?</h3>
           <p className="text-xl text-purple-100 max-w-2xl mx-auto">
