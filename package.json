@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "next build && rm -rf deploy && mkdir deploy && cp -r out/* deploy/"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
