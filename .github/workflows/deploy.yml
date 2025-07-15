@@ -17,7 +17,7 @@ jobs:
         run: yarn install
 
       - name: 🛠️ Build e exportar site estático
-        run: yarn run deploy
+        run: yarn run build
 
       - name: 🚀 Enviar via FTP para a KingHost
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -25,6 +25,6 @@ jobs:
           server: athencode.uni5.net
           username: athencode
           password: Ahtne@32dfkdjf
-          local-dir: ./deploy/
+          local-dir: ./out/
           server-dir: /www/
-          delete: true
+          dangerous-clean-slate: true
