@@ -25,10 +25,13 @@ jobs:
           server: athencode.uni5.net
           username: athencode
           password: Ahtne@32dfkdjf
+          protocol: FTP
+          port: 21
           local-dir: ./out/
-          server-dir: /www/
+          server-dir: /www
           dangerous-clean-slate: true
           log-level: verbose
+          state-name: kinghost-deploy
 
           exclude: |
             **/_next/**
