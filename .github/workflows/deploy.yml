@@ -27,3 +27,4 @@ jobs:
           password: Ahtne@32dfkdjf
           local-dir: ./deploy/
           server-dir: /www/
+          delete: true
