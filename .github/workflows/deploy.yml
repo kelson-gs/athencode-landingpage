@@ -25,5 +25,5 @@ jobs:
           server: athencode.uni5.net
           username: athencode
           password: Ahtne@32dfkdjf
-          local-dir: ./deploy
+          local-dir: ./deploy/
           server-dir: /www/
