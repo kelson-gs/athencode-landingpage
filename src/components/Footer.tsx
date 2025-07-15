@@ -63,7 +63,6 @@ const Footer = () => {
               <li><a href="#services" className="hover:text-white transition-colors">Desenvolvimento Web</a></li>
               <li><a href="#services" className="hover:text-white transition-colors">Apps Mobile</a></li>
               <li><a href="#services" className="hover:text-white transition-colors">Backend & APIs</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Consultoria Tech</a></li>
             </ul>
           </div>
           
@@ -76,7 +75,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4" />
-                <span>+55 (77) 9111-7217</span>
+                <span><a href="https://api.whatsapp.com/send?phone=5577991117217&text=Olá%20,Tudo%20bem?%20Gostaria%20de%20um%20Orçamento">+55 (77) 99111-7217</a></span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Phone className="h-4 w-4" />
+                <span><a href="https://api.whatsapp.com/send?phone=5516989260142&text=Olá%20,Tudo%20bem?%20Gostaria%20de%20um%20Orçamento">+55 (16) 98926-0142</a></span>
               </div>
             </div>
           </div>

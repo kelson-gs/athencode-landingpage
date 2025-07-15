@@ -4,7 +4,7 @@ import { Award, Clock, Users, Target } from 'lucide-react';
 
 const About = () => {
   const stats = [
-    { icon: Users, number: '50+', label: 'Projetos Entregues' },
+    // { icon: Users, number: '50+', label: 'Projetos Entregues' },
     { icon: Clock, number: '3+', label: 'Anos de Experiência' },
     { icon: Award, number: '100%', label: 'Clientes Satisfeitos' },
     { icon: Target, number: '24/7', label: 'Suporte Disponível' }

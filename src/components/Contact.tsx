@@ -4,21 +4,50 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, Phone, MapPin, Clock, CheckCircle, Zap, Shield, Rocket, Code } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, CheckCircle, Zap, Shield, Rocket, Code, Check, AlertCircle } from 'lucide-react';
+import emailjs from 'emailjs-com'
 import { useState } from 'react';
+import { Toaster, toast } from 'react-hot-toast';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     company: '',
     message: ''
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    const loadingToast = toast.loading('Enviando...')
     // Aqui você pode implementar o envio do formulário
+
+    emailjs.send(
+      'service_bp7cgj3',
+      'template_rbnenoo',
+      formData,
+      'T-l44K9TcuCJ8w2Cp'
+    )
+      .then(() => {
+        toast.success(
+          <div className='flex items-center gap-2'>
+            <Check className='text-green-500 w-4 h-4' />
+            Mensagem enviada com sucesso!
+          </div>,
+          { id: loadingToast }
+        )
+        setFormData({ name: '', email: '', phone: '', company: '', message: '' });
+      })
+      .catch(err => {
+        toast.success(
+          <div className='flex items-center gap-2'>
+            <AlertCircle className='text-red-500 w-4 h-4' />
+            Erro ao enviar a mensagem.
+          </div>,
+          { id: loadingToast }
+        )
+      });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -30,7 +59,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20 bg-slate-50">
-       <section>
+      <section>
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Por que escolher a .ATHEN CODE?</h2>
@@ -155,7 +184,7 @@ const Contact = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-purple-800 text-white">
+      <section id="contact-form" className="py-20 bg-gradient-to-r from-purple-600 to-purple-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <h3 className="text-4xl font-bold mb-6">Pronto para transformar sua ideia em realidade?</h3>
           <p className="text-xl text-purple-100 max-w-2xl mx-auto">
@@ -169,7 +198,7 @@ const Contact = () => {
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-bold text-slate-800 mb-6">Informações de Contato</h3>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="bg-blue-100 p-3 rounded-full">
@@ -180,17 +209,22 @@ const Contact = () => {
                     <p className="text-slate-600">athencodecompany@gmail.com</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="bg-blue-100 p-3 rounded-full">
                     <Phone className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-slate-800">Telefone</h4>
-                    <p className="text-slate-600">+55 (77) 9111-7217</p>
+                    <h4 className="font-semibold text-slate-800">Telefone - <label className=' text-sm text-slate-500'>Clique no numero para whatsapp</label></h4>
+                    <p className="text-slate-600">
+                      <a href="https://api.whatsapp.com/send?phone=5577991117217&text=Olá%20,Tudo%20bem?%20Gostaria%20de%20um%20Orçamento">+55 (77) 9 9111-7217</a>
+                    </p>
+                    <p className="text-slate-600">
+                      <a href="https://api.whatsapp.com/send?phone=5516989260142&text=Olá%20,Tudo%20bem?%20Gostaria%20de%20um%20Orçamento">+55 (16) 9 8926-0142</a>
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="bg-blue-100 p-3 rounded-full">
                     <Clock className="h-6 w-6 text-blue-600" />
@@ -204,7 +238,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          
+
           <Card className="border-slate-200">
             <CardHeader>
               <CardTitle className="text-2xl text-slate-800">Solicite um Orçamento</CardTitle>
@@ -231,6 +265,21 @@ const Contact = () => {
                     />
                   </div>
                   <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-2">
+                      Telefone
+                    </label>
+                    <Input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      className='border-blue-200'
+                      required
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder="11988888888"
+                    />
+                  </div>
+                  <div>
                     <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
                       Email *
                     </label>
@@ -246,7 +295,7 @@ const Contact = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-2">
                     Empresa
@@ -261,7 +310,7 @@ const Contact = () => {
                     placeholder="Nome da sua empresa"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
                     Mensagem *
@@ -277,8 +326,8 @@ const Contact = () => {
                     rows={5}
                   />
                 </div>
-                
-                <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+
+                <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold cursor-pointer">
                   Enviar Mensagem
                 </Button>
               </form>
@@ -286,6 +335,7 @@ const Contact = () => {
           </Card>
         </div>
       </div>
+      <Toaster position='top-right' reverseOrder={false} />
     </section>
   );
 };
