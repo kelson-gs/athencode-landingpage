@@ -27,16 +27,16 @@ const Hero = () => {
           
         </div>
         
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in animation-delay-200">
+        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in animation-delay-200 mt-32 md:mt-0">
           Soluções Tecnológicas
           <span className="block text-blue-600">Inovadoras</span>
         </h1>
         
-        <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto animate-fade-in animation-delay-400">
+        <p className="text-base md:text-2xl text-white mb-8 max-w-3xl mx-auto animate-fade-in animation-delay-400">
           Transformamos suas ideias em soluções digitais poderosas. Desenvolvemos aplicações web modernas e sistemas personalizados que geram resultado real para o seu negócio.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in animation-delay-600">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-44 md:mb-12 animate-fade-in animation-delay-600">
           <Button 
             size="lg" 
             className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg cursor-pointer"
@@ -44,6 +44,14 @@ const Hero = () => {
           >
             Começar Projeto
           </Button>
+          <div className="md:hidden md:flex justify-center mt-14">
+            <button 
+              onClick={scrollToServices}
+              className="animate-bounce bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition-shadow"
+            >
+              <ArrowDown className="h-6 w-6 text-blue-600" />
+            </button>
+          </div>
           {/* <Button 
             variant="outline" 
             size="lg" 
@@ -80,12 +88,14 @@ const Hero = () => {
           </div>
         </div>
         
-        <button 
-          onClick={scrollToServices}
-          className="animate-bounce bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition-shadow"
-        >
-          <ArrowDown className="h-6 w-6 text-blue-600" />
-        </button>
+        <div className="hidden md:flex justify-center">
+          <button 
+            onClick={scrollToServices}
+            className="animate-bounce bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition-shadow"
+          >
+            <ArrowDown className="h-6 w-6 text-blue-600" />
+          </button>
+        </div>
       </div>
     </section>
   );
